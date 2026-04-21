@@ -1,0 +1,61 @@
+import { useEffect, useState } from "react";
+import { ShoppingBag, Leaf } from "lucide-react";
+
+export function Header({ cartCount }: { cartCount: number }) {
+  const [scrolled, setScrolled] = useState(false);
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 24);
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  const link = (href: string, label: string) => (
+    <a
+      href={href}
+      className="relative text-sm font-medium text-foreground/80 transition-colors hover:text-leaf-deep
+        after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-full after:origin-right after:scale-x-0
+        after:bg-leaf after:transition-transform after:duration-300 hover:after:origin-left hover:after:scale-x-100"
+    >
+      {label}
+    </a>
+  );
+
+  return (
+    <header
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+        scrolled
+          ? "bg-background/80 backdrop-blur-xl border-b border-border/60 py-3"
+          : "bg-transparent py-6"
+      }`}
+    >
+      <div className="mx-auto flex max-w-7xl items-center justify-between px-6">
+        <a href="#inicio" className="flex items-center gap-2 group">
+          <span className="grid place-items-center h-9 w-9 rounded-full bg-leaf-deep text-cream transition-transform group-hover:rotate-12">
+            <Leaf className="h-5 w-5" />
+          </span>
+          <span className="font-display text-2xl font-black tracking-tight text-leaf-deep">
+            verde
+          </span>
+        </a>
+        <nav className="hidden md:flex items-center gap-10">
+          {link("#inicio", "Inicio")}
+          {link("#sabores", "Sabores")}
+          {link("#beneficios", "Beneficios")}
+          {link("#contacto", "Contacto")}
+        </nav>
+        <button
+          className="relative grid place-items-center h-11 w-11 rounded-full bg-leaf-deep text-cream
+            transition-all hover:scale-110 hover:bg-leaf active:scale-95"
+          aria-label="Carrito"
+        >
+          <ShoppingBag className="h-5 w-5" />
+          {cartCount > 0 && (
+            <span className="absolute -top-1 -right-1 grid h-5 w-5 place-items-center rounded-full bg-citrus text-[11px] font-bold text-leaf-deep">
+              {cartCount}
+            </span>
+          )}
+        </button>
+      </div>
+    </header>
+  );
+}
