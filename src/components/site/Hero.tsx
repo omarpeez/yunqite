@@ -44,9 +44,9 @@ export function Hero() {
             <Sparkles className="h-3.5 w-3.5" /> Cosecha 2026
           </span>
           <h1 className="mt-6 font-display text-6xl md:text-8xl font-black leading-[0.9] text-leaf-deep">
-            Frescura<br />
-            <span className="italic font-light">embotellada</span><br />
-            <span className="text-leaf">a sorbos.</span>
+            Nada sabe<br />
+            <span className="italic font-light">mejor que</span><br />
+            <span className="text-leaf">ser tú.</span>
           </h1>
           <p className="mt-8 max-w-md text-lg text-muted-foreground">
             Té orgánico premium, infusionado en frío y endulzado solo con la naturaleza.
