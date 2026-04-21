@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { ArrowRight, Sparkles } from "lucide-react";
-import bottle from "@/assets/bottle-hero.png";
+import bottle from "@/assets/bottle-green-lemon.png";
 import leaf from "@/assets/leaf.png";
 
 export function Hero() {
