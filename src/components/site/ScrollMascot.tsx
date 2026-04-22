@@ -46,14 +46,14 @@ export function ScrollMascot() {
 
   return (
     <aside
-      className="pointer-events-none fixed bottom-5 left-4 z-40 hidden select-none sm:block"
+      className="pointer-events-none fixed bottom-3 left-3 z-[60] block origin-bottom-left scale-75 select-none sm:bottom-5 sm:left-4 sm:scale-100"
       aria-label="Mascota demo de Yùnqi acompañando el recorrido"
     >
       <div
         className="relative transition-transform duration-700 ease-out"
         style={{ transform }}
       >
-        <div className="absolute -right-24 -top-5 rounded-full bg-background/90 px-4 py-2 text-xs font-semibold uppercase tracking-widest text-leaf-deep shadow-[0_14px_36px_-24px_oklch(0.2_0.05_149.3/0.65)] ring-1 ring-leaf/15 backdrop-blur-md">
+        <div className="absolute left-16 top-1 whitespace-nowrap rounded-full bg-background/95 px-4 py-2 text-xs font-semibold uppercase tracking-widest text-leaf-deep shadow-[0_14px_36px_-24px_oklch(0.2_0.05_149.3/0.65)] ring-1 ring-leaf/15 backdrop-blur-md sm:-right-24 sm:-top-5 sm:left-auto">
           {activeStop.phrase}
         </div>
 
