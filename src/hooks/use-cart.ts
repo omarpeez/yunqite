@@ -19,6 +19,7 @@ export type CartItem = {
 type Listener = () => void;
 const listeners = new Set<Listener>();
 let items: CartItem[] = [];
+const EMPTY_CART: CartItem[] = [];
 
 const STORAGE_KEY = "verde-cart-v1";
 
@@ -57,7 +58,7 @@ function getSnapshot() {
 }
 
 function getServerSnapshot(): CartItem[] {
-  return [];
+  return EMPTY_CART;
 }
 
 export function addItem(input: Omit<CartItem, "id" | "qty"> & { qty?: number }) {
