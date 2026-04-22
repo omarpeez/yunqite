@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
-import { ShoppingBag, Leaf } from "lucide-react";
+import { ShoppingBag } from "lucide-react";
 import { Link } from "@tanstack/react-router";
 import { useCart, openCart } from "@/hooks/use-cart";
+import logoYunqi from "@/assets/logo-yunqi.png";
 
 export function Header() {
   const [scrolled, setScrolled] = useState(false);
