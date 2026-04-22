@@ -1,4 +1,5 @@
-import { Instagram, Facebook, Leaf } from "lucide-react";
+import { Instagram, Facebook } from "lucide-react";
+import logoYunqi from "@/assets/logo-yunqi.png";
 
 export function Footer() {
   const social = [
@@ -11,12 +12,7 @@ export function Footer() {
       <div className="mx-auto max-w-7xl">
         <div className="grid grid-cols-1 gap-12 md:grid-cols-4">
           <div className="md:col-span-2">
-            <div className="flex items-center gap-2">
-              <span className="grid h-9 w-9 place-items-center rounded-full bg-citrus text-leaf-deep">
-                <Leaf className="h-5 w-5" />
-              </span>
-              <span className="font-display text-2xl font-black">verde</span>
-            </div>
+            <img src={logoYunqi} alt="Yùnqi" className="h-12 w-auto brightness-0 invert" />
             <p className="mt-6 max-w-sm text-cream/60">
               Té premium embotellado. Cosechado con cariño, servido con orgullo.
             </p>
