@@ -10,10 +10,10 @@ const SIZES: Size[] = ["355ml", "500ml", "1L"];
 const PRICE: Record<Size, number> = { "355ml": 3.5, "500ml": 4.5, "1L": 7.0 };
 
 const products = [
-  { id: "g", name: "Té Verde con Limón", img: green, accent: "citrus", note: "Cítrico • Refrescante" },
-  { id: "p", name: "Té Negro Durazno", img: peach, accent: "peach", note: "Dulce • Aterciopelado" },
-  { id: "h", name: "Hibisco Berry", img: hibiscus, accent: "berry", note: "Floral • Vibrante" },
-  { id: "m", name: "Matcha Menta", img: matcha, accent: "leaf", note: "Herbal • Energizante" },
+  { id: "o", name: "Té Oolong", img: matcha, accent: "leaf", note: "Tostado • Equilibrado" },
+  { id: "j", name: "Jamaica", img: hibiscus, accent: "berry", note: "Floral • Vibrante" },
+  { id: "pi", name: "Piña", img: peach, accent: "peach", note: "Tropical • Jugoso" },
+  { id: "lf", name: "Limón-Fresa", img: green, accent: "citrus", note: "Cítrico • Dulce" },
 ] as const;
 
 export function Shop({ onAdd }: { onAdd: () => void }) {
