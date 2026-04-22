@@ -10,10 +10,10 @@ const SIZES: Size[] = ["500ml", "1L"];
 const PRICE: Record<Size, number> = { "500ml": 4.5, "1L": 7.0 };
 
 const products = [
-  { id: "o", name: "Té Oolong", img: oolong, accent: "leaf", note: "Tostado • Equilibrado" },
-  { id: "j", name: "Jamaica", img: hibiscus, accent: "berry", note: "Floral • Vibrante" },
-  { id: "pi", name: "Piña", img: peach, accent: "peach", note: "Tropical • Jugoso" },
-  { id: "lf", name: "Limón-Fresa", img: green, accent: "citrus", note: "Cítrico • Dulce" },
+  { id: "o", name: "Té Oolong", img: oolong, accent: "leaf" },
+  { id: "j", name: "Jamaica", img: hibiscus, accent: "berry" },
+  { id: "pi", name: "Piña", img: peach, accent: "peach" },
+  { id: "lf", name: "Limón-Fresa", img: green, accent: "citrus" },
 ] as const;
 
 export function Shop() {
@@ -85,8 +85,7 @@ function ProductCard({
           className="absolute inset-0 m-auto h-full w-auto object-contain p-4 transition-transform duration-700 group-hover:scale-110 group-hover:-rotate-6"
         />
       </div>
-      <p className="text-[11px] font-semibold uppercase tracking-widest text-leaf">{product.note}</p>
-      <h3 className="mt-2 font-display text-2xl font-bold text-leaf-deep">{product.name}</h3>
+      <h3 className="font-display text-2xl font-bold text-leaf-deep">{product.name}</h3>
 
       <div className="mt-4 flex gap-2">
         {SIZES.map((s) => (

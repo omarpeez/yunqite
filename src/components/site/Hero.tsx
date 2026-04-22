@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { ArrowRight } from "lucide-react";
-import bottle from "@/assets/bottle-yunqi-oolong.png";
+import bottle from "@/assets/bottle-oolong-real.png";
 import leaf from "@/assets/leaf.png";
 
 export function Hero() {
