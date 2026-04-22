@@ -1,8 +1,11 @@
 import { useEffect, useState } from "react";
 import { ShoppingBag, Leaf } from "lucide-react";
+import { Link } from "@tanstack/react-router";
+import { useCart, openCart } from "@/hooks/use-cart";
 
-export function Header({ cartCount }: { cartCount: number }) {
+export function Header() {
   const [scrolled, setScrolled] = useState(false);
+  const { count } = useCart();
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24);
     window.addEventListener("scroll", onScroll);
@@ -29,29 +32,30 @@ export function Header({ cartCount }: { cartCount: number }) {
       }`}
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6">
-        <a href="#inicio" className="flex items-center gap-2 group">
+        <Link to="/" className="flex items-center gap-2 group">
           <span className="grid place-items-center h-9 w-9 rounded-full bg-leaf-deep text-cream transition-transform group-hover:rotate-12">
             <Leaf className="h-5 w-5" />
           </span>
           <span className="font-display text-2xl font-black tracking-tight text-leaf-deep">
             verde
           </span>
-        </a>
+        </Link>
         <nav className="hidden md:flex items-center gap-10">
-          {link("#inicio", "Inicio")}
-          {link("#sabores", "Sabores")}
-          {link("#beneficios", "Beneficios")}
-          {link("#contacto", "Contacto")}
+          {link("/#inicio", "Inicio")}
+          {link("/#sabores", "Sabores")}
+          {link("/#beneficios", "Beneficios")}
+          {link("/#contacto", "Contacto")}
         </nav>
         <button
+          onClick={openCart}
           className="relative grid place-items-center h-11 w-11 rounded-full bg-leaf-deep text-cream
             transition-all hover:scale-110 hover:bg-leaf active:scale-95"
-          aria-label="Carrito"
+          aria-label="Abrir carrito"
         >
           <ShoppingBag className="h-5 w-5" />
-          {cartCount > 0 && (
-            <span className="absolute -top-1 -right-1 grid h-5 w-5 place-items-center rounded-full bg-citrus text-[11px] font-bold text-leaf-deep">
-              {cartCount}
+          {count > 0 && (
+            <span className="absolute -top-1 -right-1 grid h-5 w-5 place-items-center rounded-full bg-citrus text-[11px] font-bold text-leaf-deep animate-in zoom-in">
+              {count}
             </span>
           )}
         </button>
