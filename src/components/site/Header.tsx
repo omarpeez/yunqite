@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
-import { ShoppingBag, Leaf } from "lucide-react";
+import { ShoppingBag } from "lucide-react";
 import { Link } from "@tanstack/react-router";
 import { useCart, openCart } from "@/hooks/use-cart";
+import logoYunqi from "@/assets/logo-yunqi.png";
 
 export function Header() {
   const [scrolled, setScrolled] = useState(false);
@@ -32,13 +33,12 @@ export function Header() {
       }`}
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6">
-        <Link to="/" className="flex items-center gap-2 group">
-          <span className="grid place-items-center h-9 w-9 rounded-full bg-leaf-deep text-cream transition-transform group-hover:rotate-12">
-            <Leaf className="h-5 w-5" />
-          </span>
-          <span className="font-display text-2xl font-black tracking-tight text-leaf-deep">
-            verde
-          </span>
+        <Link to="/" className="flex items-center gap-2 group" aria-label="Yùnqi inicio">
+          <img
+            src={logoYunqi}
+            alt="Yùnqi"
+            className="h-9 md:h-10 w-auto transition-transform group-hover:scale-105"
+          />
         </Link>
         <nav className="hidden md:flex items-center gap-10">
           {link("/#inicio", "Inicio")}
