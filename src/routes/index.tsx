@@ -6,6 +6,7 @@ import { Benefits } from "@/components/site/Benefits";
 import { Contact } from "@/components/site/Contact";
 import { Footer } from "@/components/site/Footer";
 import { CartDrawer } from "@/components/site/CartDrawer";
+import { ScrollMascot } from "@/components/site/ScrollMascot";
 import { useReveal } from "@/hooks/use-reveal";
 
 export const Route = createFileRoute("/")({
@@ -23,6 +24,7 @@ function Index() {
       <Contact />
       <Footer />
       <CartDrawer />
+      <ScrollMascot />
     </main>
   );
 }
