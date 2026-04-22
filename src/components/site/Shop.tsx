@@ -4,8 +4,8 @@ import green from "@/assets/bottle-green-lemon.png";
 import peach from "@/assets/bottle-peach.png";
 import hibiscus from "@/assets/bottle-hibiscus.png";
 import matcha from "@/assets/bottle-matcha.png";
+import { addItem, openCart, type Size } from "@/hooks/use-cart";
 
-type Size = "355ml" | "500ml" | "1L";
 const SIZES: Size[] = ["355ml", "500ml", "1L"];
 const PRICE: Record<Size, number> = { "355ml": 3.5, "500ml": 4.5, "1L": 7.0 };
 
@@ -16,7 +16,7 @@ const products = [
   { id: "lf", name: "Limón-Fresa", img: green, accent: "citrus", note: "Cítrico • Dulce" },
 ] as const;
 
-export function Shop({ onAdd }: { onAdd: () => void }) {
+export function Shop() {
   return (
     <section id="sabores" className="relative py-32 px-6 bg-cream">
       <div className="mx-auto max-w-7xl">
@@ -30,7 +30,7 @@ export function Shop({ onAdd }: { onAdd: () => void }) {
 
         <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
           {products.map((p, i) => (
-            <ProductCard key={p.id} product={p} delay={i * 100} onAdd={onAdd} />
+            <ProductCard key={p.id} product={p} delay={i * 100} />
           ))}
         </div>
       </div>
@@ -41,11 +41,9 @@ export function Shop({ onAdd }: { onAdd: () => void }) {
 function ProductCard({
   product,
   delay,
-  onAdd,
 }: {
   product: (typeof products)[number];
   delay: number;
-  onAdd: () => void;
 }) {
   const [size, setSize] = useState<Size>("500ml");
   const [added, setAdded] = useState(false);
@@ -54,6 +52,19 @@ function ProductCard({
     peach: "from-peach/40 to-earth/20",
     berry: "from-berry/30 to-peach/20",
     leaf: "from-leaf/30 to-citrus/20",
+  };
+
+  const handleAdd = () => {
+    addItem({
+      productId: product.id,
+      name: product.name,
+      size,
+      price: PRICE[size],
+      img: product.img,
+    });
+    setAdded(true);
+    openCart();
+    setTimeout(() => setAdded(false), 1200);
   };
 
   return (
@@ -98,11 +109,7 @@ function ProductCard({
           ${PRICE[size].toFixed(2)}
         </span>
         <button
-          onClick={() => {
-            setAdded(true);
-            onAdd();
-            setTimeout(() => setAdded(false), 1200);
-          }}
+          onClick={handleAdd}
           className={`grid h-12 w-12 place-items-center rounded-full transition-all active:scale-90 ${
             added ? "bg-leaf scale-110" : "bg-leaf-deep hover:bg-leaf hover:scale-110"
           } text-cream`}
