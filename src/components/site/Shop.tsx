@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { Plus } from "lucide-react";
-import green from "@/assets/bottle-green-lemon.png";
-import peach from "@/assets/bottle-peach.png";
-import hibiscus from "@/assets/bottle-hibiscus.png";
+import jamaica from "@/assets/bottle-jamaica-real.png";
+import pina from "@/assets/bottle-pina-real.png";
+import limonFresa from "@/assets/bottle-limon-fresa-real.png";
 import oolong from "@/assets/bottle-oolong-real.png";
 import { addItem, openCart, type Size } from "@/hooks/use-cart";
 
@@ -11,9 +11,9 @@ const PRICE: Record<Size, number> = { "500ml": 4.5, "1L": 7.0 };
 
 const products = [
   { id: "o", name: "Té Oolong", img: oolong, accent: "leaf" },
-  { id: "j", name: "Jamaica", img: hibiscus, accent: "berry" },
-  { id: "pi", name: "Piña", img: peach, accent: "peach" },
-  { id: "lf", name: "Limón-Fresa", img: green, accent: "citrus" },
+  { id: "j", name: "Jamaica", img: jamaica, accent: "berry" },
+  { id: "pi", name: "Piña", img: pina, accent: "peach" },
+  { id: "lf", name: "Limón-Fresa", img: limonFresa, accent: "citrus" },
 ] as const;
 
 export function Shop() {
