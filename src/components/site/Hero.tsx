@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { ArrowRight, Sparkles } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import bottle from "@/assets/bottle-yunqi-oolong.png";
 import leaf from "@/assets/leaf.png";
 
@@ -40,10 +40,7 @@ export function Hero() {
 
       <div className="relative mx-auto grid max-w-7xl grid-cols-1 items-center gap-12 px-6 lg:grid-cols-2">
         <div className="reveal">
-          <span className="inline-flex items-center gap-2 rounded-full border border-leaf/30 bg-leaf/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-leaf-deep">
-            <Sparkles className="h-3.5 w-3.5" /> Cosecha 2026
-          </span>
-          <h1 className="mt-6 font-display text-6xl md:text-8xl font-black leading-[0.9] text-leaf-deep">
+          <h1 className="font-display text-6xl md:text-8xl font-black leading-[0.9] text-leaf-deep">
             Nada sabe<br />
             <span className="italic font-light">mejor que</span><br />
             <span className="text-leaf">ser tú.</span>
