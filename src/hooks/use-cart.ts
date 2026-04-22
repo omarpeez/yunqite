@@ -1,8 +1,7 @@
 import { useSyncExternalStore } from "react";
 
-export type Size = "355ml" | "500ml" | "1L";
+export type Size = "500ml" | "1L";
 export const SIZE_PRICE: Record<Size, number> = {
-  "355ml": 3.5,
   "500ml": 4.5,
   "1L": 7.0,
 };
