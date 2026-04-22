@@ -3,14 +3,14 @@ import { Plus } from "lucide-react";
 import green from "@/assets/bottle-green-lemon.png";
 import peach from "@/assets/bottle-peach.png";
 import hibiscus from "@/assets/bottle-hibiscus.png";
-import matcha from "@/assets/bottle-matcha.png";
+import oolong from "@/assets/bottle-oolong-real.png";
 import { addItem, openCart, type Size } from "@/hooks/use-cart";
 
 const SIZES: Size[] = ["500ml", "1L"];
 const PRICE: Record<Size, number> = { "500ml": 4.5, "1L": 7.0 };
 
 const products = [
-  { id: "o", name: "Té Oolong", img: matcha, accent: "leaf", note: "Tostado • Equilibrado" },
+  { id: "o", name: "Té Oolong", img: oolong, accent: "leaf", note: "Tostado • Equilibrado" },
   { id: "j", name: "Jamaica", img: hibiscus, accent: "berry", note: "Floral • Vibrante" },
   { id: "pi", name: "Piña", img: peach, accent: "peach", note: "Tropical • Jugoso" },
   { id: "lf", name: "Limón-Fresa", img: green, accent: "citrus", note: "Cítrico • Dulce" },
