@@ -6,8 +6,8 @@ import hibiscus from "@/assets/bottle-hibiscus.png";
 import matcha from "@/assets/bottle-matcha.png";
 import { addItem, openCart, type Size } from "@/hooks/use-cart";
 
-const SIZES: Size[] = ["355ml", "500ml", "1L"];
-const PRICE: Record<Size, number> = { "355ml": 3.5, "500ml": 4.5, "1L": 7.0 };
+const SIZES: Size[] = ["500ml", "1L"];
+const PRICE: Record<Size, number> = { "500ml": 4.5, "1L": 7.0 };
 
 const products = [
   { id: "o", name: "Té Oolong", img: matcha, accent: "leaf", note: "Tostado • Equilibrado" },
