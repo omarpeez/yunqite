@@ -4,7 +4,7 @@ import bottle from "@/assets/mascot-yunqi.png";
 const stops = [
   { id: "inicio", x: 0, y: 0, tilt: -6 },
   { id: "sabores", x: 10, y: -42, tilt: 8 },
-  { id: "beneficios", x: -8, y: -84, tilt: -8 },
+  { id: "merch", x: -8, y: -84, tilt: -8 },
   { id: "contacto", x: 8, y: -126, tilt: 6 },
 ] as const;
 
