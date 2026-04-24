@@ -3,7 +3,7 @@ import logoYunqi from "@/assets/logo-yunqi.png";
 
 export function Footer() {
   const social = [
-    { icon: Instagram, label: "Instagram", href: "https://instagram.com" },
+    { icon: Instagram, label: "Instagram", href: "https://www.instagram.com/yunqite?igsh=MXQ1a2R2ZDFpMjMxeg==" },
     { icon: TikTok, label: "TikTok", href: "https://tiktok.com" },
     { icon: Facebook, label: "Facebook", href: "https://facebook.com" },
   ];
