@@ -69,17 +69,17 @@ export function ScrollMascot() {
         className="relative h-36 w-28 transition-transform duration-700 ease-out sm:h-44 sm:w-36"
         style={{ transform }}
       >
-        <div className="absolute left-14 top-3 z-10 w-36 rotate-3 rounded-md bg-cream px-3 py-2 text-center text-[10px] font-black uppercase leading-tight tracking-wider text-leaf-deep shadow-[0_14px_36px_-24px_oklch(0.2_0.05_149.3/0.65)] ring-2 ring-leaf-deep/80 transition-all duration-500 sm:left-20 sm:top-1 sm:w-40 sm:text-xs">
-          <span className="absolute -bottom-4 left-5 h-4 w-1.5 rotate-6 bg-leaf-deep" aria-hidden />
-          <span className="absolute -bottom-4 right-5 h-4 w-1.5 -rotate-6 bg-leaf-deep" aria-hidden />
-          {phrases[phraseIndex]}
-        </div>
-
         <img
           src={bottle}
-          alt="Botella Oolong animada como mascota de Yùnqi"
+          alt="Mascota oficial Yùnqi"
           className="relative h-full w-auto animate-float-bottle object-contain drop-shadow-[0_24px_30px_oklch(0.2_0.05_149.3/0.22)]"
         />
+
+        <div className="absolute left-1/2 top-1/2 z-10 w-28 -translate-x-1/2 -translate-y-1/2 rotate-[-4deg] rounded-md bg-cream px-3 py-2 text-center text-[10px] font-black uppercase leading-tight tracking-wider text-leaf-deep shadow-[0_14px_36px_-18px_oklch(0.2_0.05_149.3/0.75)] ring-2 ring-leaf-deep/80 transition-all duration-500 sm:w-32 sm:text-xs">
+          <span className="absolute -bottom-3 left-4 h-3 w-1.5 rotate-6 bg-leaf-deep" aria-hidden />
+          <span className="absolute -bottom-3 right-4 h-3 w-1.5 -rotate-6 bg-leaf-deep" aria-hidden />
+          {phrases[phraseIndex]}
+        </div>
       </div>
     </aside>
   );
