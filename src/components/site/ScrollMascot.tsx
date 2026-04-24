@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
-import bottle from "@/assets/bottle-oolong-real.png";
+import bottle from "@/assets/mascot-yunqi.png";
 
 const stops = [
   { id: "inicio", x: 0, y: 0, tilt: -6 },
