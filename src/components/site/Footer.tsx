@@ -35,7 +35,7 @@ export function Footer() {
             <h4 className="font-display text-lg font-bold">Enlaces</h4>
             <ul className="mt-4 space-y-2 text-cream/70">
               <li><a href="#sabores" className="hover:text-citrus transition-colors">Sabores</a></li>
-              <li><a href="#beneficios" className="hover:text-citrus transition-colors">Beneficios</a></li>
+              <li><a href="#merch" className="hover:text-citrus transition-colors">Merch</a></li>
               <li><a href="#contacto" className="hover:text-citrus transition-colors">Contacto</a></li>
             </ul>
           </div>
