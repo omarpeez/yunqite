@@ -46,8 +46,17 @@ export function Hero() {
             <span className="text-leaf">ser tú.</span>
           </h1>
           <p className="mt-8 max-w-md text-lg text-muted-foreground">
-            Té orgánico premium, infusionado en frío y endulzado solo con la naturaleza.
-            Sin azúcar añadida. Sin compromiso.
+            Saludable, antioxidante y refrescante.{" "}
+            <a
+              href="https://www.instagram.com/yunqite?igsh=MXQ1a2R2ZDFpMjMxeg=="
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Síguenos en Instagram @yunqite"
+              className="relative inline-block font-display font-bold italic text-leaf-deep bg-gradient-to-r from-citrus via-leaf to-citrus bg-[length:200%_auto] bg-clip-text text-transparent animate-[shine_3s_linear_infinite] hover:scale-110 transition-transform"
+            >
+              Yunqi
+            </a>{" "}
+            té el mejor té de oolong del mundo.
           </p>
           <div className="mt-10 flex flex-wrap items-center gap-4">
             <a

@@ -184,6 +184,9 @@
   0%, 100% { box-shadow: 0 0 0 0 oklch(0.62 0.14 145 / 0.4); }
   50% { box-shadow: 0 0 0 16px oklch(0.62 0.14 145 / 0); }
 }
+@keyframes shine {
+  to { background-position: 200% center; }
+}
 
 .animate-float-bottle { animation: float-bottle 6s ease-in-out infinite; }
 .animate-drift { animation: drift 12s ease-in-out infinite; }
