@@ -48,11 +48,9 @@ export function Hero() {
           <p className="mt-8 max-w-md text-lg text-muted-foreground">
             Saludable, antioxidante y refrescante.{" "}
             <a
-              href="https://www.instagram.com/yunqite?igsh=MXQ1a2R2ZDFpMjMxeg=="
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Síguenos en Instagram @yunqite"
-              className="relative inline-block font-display font-bold italic text-leaf-deep bg-gradient-to-r from-citrus via-leaf to-citrus bg-[length:200%_auto] bg-clip-text text-transparent animate-[shine_3s_linear_infinite] hover:scale-110 transition-transform"
+              href="#inicio"
+              aria-label="Volver al inicio"
+              className="relative inline-block font-display font-bold italic text-leaf-deep bg-gradient-to-r from-citrus via-leaf to-citrus bg-[length:200%_auto] bg-clip-text text-transparent animate-[shine_3s_linear_infinite] hover:scale-110 transition-transform cursor-pointer"
             >
               Yunqi
             </a>{" "}
