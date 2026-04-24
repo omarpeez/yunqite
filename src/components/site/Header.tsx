@@ -43,7 +43,7 @@ export function Header() {
         <nav className="hidden md:flex items-center gap-10">
           {link("/#inicio", "Inicio")}
           {link("/#sabores", "Sabores")}
-          {link("/#beneficios", "Beneficios")}
+          {link("/#merch", "Merch")}
           {link("/#contacto", "Contacto")}
         </nav>
         <button
