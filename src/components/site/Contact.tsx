@@ -1,17 +1,17 @@
 import { useState } from "react";
 import { z } from "zod";
-import { Send, Check } from "lucide-react";
+import { Send } from "lucide-react";
+
+const WHATSAPP_NUMBER = "526682502760";
 
 const schema = z.object({
   name: z.string().trim().min(2, "Nombre muy corto").max(100),
-  email: z.string().trim().email("Email inválido").max(255),
   message: z.string().trim().min(10, "Mensaje muy corto").max(1000),
 });
 
 export function Contact() {
-  const [form, setForm] = useState({ name: "", email: "", message: "" });
+  const [form, setForm] = useState({ name: "", message: "" });
   const [errors, setErrors] = useState<Record<string, string>>({});
-  const [sent, setSent] = useState(false);
 
   const onSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -23,13 +23,21 @@ export function Contact() {
       return;
     }
     setErrors({});
-    setSent(true);
-    setForm({ name: "", email: "", message: "" });
-    setTimeout(() => setSent(false), 3000);
+    const lines = [
+      "¡Hola Yùnqi! Me gustaría conversar con ustedes:",
+      "",
+      `*Nombre:* ${form.name}`,
+      "",
+      "*Mensaje:*",
+      form.message,
+    ];
+    const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(lines.join("\n"))}`;
+    window.open(url, "_blank", "noopener,noreferrer");
+    setForm({ name: "", message: "" });
   };
 
   const field = (
-    name: "name" | "email" | "message",
+    name: "name" | "message",
     label: string,
     type = "text"
   ) => (
@@ -75,24 +83,13 @@ export function Contact() {
         </div>
         <form onSubmit={onSubmit} className="space-y-6">
           {field("name", "Nombre")}
-          {field("email", "Email", "email")}
           {field("message", "Mensaje")}
           <button
             type="submit"
-            className={`reveal group inline-flex items-center gap-3 rounded-full px-8 py-4 text-sm font-semibold uppercase tracking-wider text-cream transition-all hover:scale-105 active:scale-95 ${
-              sent ? "bg-leaf" : "bg-leaf-deep hover:bg-leaf"
-            }`}
+            className="reveal group inline-flex items-center gap-3 rounded-full bg-leaf-deep hover:bg-leaf px-8 py-4 text-sm font-semibold uppercase tracking-wider text-cream transition-all hover:scale-105 active:scale-95"
           >
-            {sent ? (
-              <>
-                <Check className="h-4 w-4" /> Enviado
-              </>
-            ) : (
-              <>
-                Enviar mensaje
-                <Send className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-              </>
-            )}
+            Enviar por WhatsApp
+            <Send className="h-4 w-4 transition-transform group-hover:translate-x-1" />
           </button>
         </form>
       </div>
