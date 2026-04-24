@@ -48,7 +48,7 @@ export function ScrollMascot() {
         if (next === current) next = (next + 1) % phrases.length;
         return next;
       });
-    }, 2800);
+    }, 40000);
 
     return () => window.clearInterval(interval);
   }, []);
