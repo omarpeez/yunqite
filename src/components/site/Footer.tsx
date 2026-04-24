@@ -4,8 +4,8 @@ import logoYunqi from "@/assets/logo-yunqi.png";
 export function Footer() {
   const social = [
     { icon: Instagram, label: "Instagram", href: "https://www.instagram.com/yunqite?igsh=MXQ1a2R2ZDFpMjMxeg==" },
-    { icon: TikTok, label: "TikTok", href: "https://tiktok.com" },
-    { icon: Facebook, label: "Facebook", href: "https://facebook.com" },
+    { icon: TikTok, label: "TikTok", href: "https://www.tiktok.com/@yunqite?_r=1&_t=ZS-95nVamUkA40" },
+    { icon: Facebook, label: "Facebook", href: "https://www.facebook.com/share/1XUcnzeLby/?mibextid=wwXIfr" },
   ];
   return (
     <footer className="bg-leaf-deep text-cream pt-20 pb-10 px-6">
