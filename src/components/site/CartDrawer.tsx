@@ -68,7 +68,12 @@ export function CartDrawer() {
                 Agrega tus sabores favoritos y descubre la frescura embotellada.
               </p>
               <button
-                onClick={closeCart}
+                onClick={() => {
+                  closeCart();
+                  setTimeout(() => {
+                    document.getElementById("sabores")?.scrollIntoView({ behavior: "smooth", block: "start" });
+                  }, 200);
+                }}
                 className="mt-8 rounded-full bg-leaf-deep px-6 py-3 text-xs font-semibold uppercase tracking-wider text-cream transition-all hover:bg-leaf"
               >
                 Explorar sabores
