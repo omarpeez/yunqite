@@ -7,7 +7,7 @@ import oolong from "@/assets/bottle-oolong-real.png";
 import { addItem, openCart, type Size } from "@/hooks/use-cart";
 
 const SIZES: Size[] = ["500ml", "1L"];
-const PRICE: Record<Size, number> = { "500ml": 4.5, "1L": 7.0 };
+const PRICE: Record<Size, number> = { "500ml": 15, "1L": 15 };
 
 const products = [
   { id: "o", name: "Té Oolong", img: oolong, accent: "leaf" },
