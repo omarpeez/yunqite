@@ -10,7 +10,7 @@ export function Footer() {
   return (
     <footer className="bg-leaf-deep text-cream pt-20 pb-10 px-6">
       <div className="mx-auto max-w-7xl">
-        <div className="grid grid-cols-1 gap-12 md:grid-cols-4">
+        <div className="grid grid-cols-1 gap-12 md:grid-cols-3">
           <div className="md:col-span-2">
             <img src={logoYunqi} alt="Yùnqi" className="h-12 w-auto brightness-0 invert" />
             <p className="mt-6 max-w-sm text-cream/60">
@@ -37,14 +37,6 @@ export function Footer() {
               <li><a href="#sabores" className="hover:text-citrus transition-colors">Sabores</a></li>
               <li><a href="#merch" className="hover:text-citrus transition-colors">Merch</a></li>
               <li><a href="#contacto" className="hover:text-citrus transition-colors">Contacto</a></li>
-            </ul>
-          </div>
-          <div>
-            <h4 className="font-display text-lg font-bold">Legal</h4>
-            <ul className="mt-4 space-y-2 text-cream/70">
-              <li><a href="#" className="hover:text-citrus transition-colors">Términos</a></li>
-              <li><a href="#" className="hover:text-citrus transition-colors">Privacidad</a></li>
-              <li><a href="#" className="hover:text-citrus transition-colors">Envíos</a></li>
             </ul>
           </div>
         </div>

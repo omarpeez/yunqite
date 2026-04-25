@@ -7,7 +7,7 @@ import oolong from "@/assets/bottle-oolong-real.png";
 import { addItem, openCart, type Size } from "@/hooks/use-cart";
 
 const SIZES: Size[] = ["500ml", "1L"];
-const PRICE: Record<Size, number> = { "500ml": 4.5, "1L": 7.0 };
+const PRICE: Record<Size, number> = { "500ml": 15, "1L": 15 };
 
 const products = [
   { id: "o", name: "Té Oolong", img: oolong, accent: "leaf" },
@@ -33,6 +33,10 @@ export function Shop() {
             <ProductCard key={p.id} product={p} delay={i * 100} />
           ))}
         </div>
+
+        <p className="reveal mt-10 text-center text-sm italic text-leaf-deep/70">
+          *Precios de menudeo, pregunta por nuestros precios de mayoreo.
+        </p>
       </div>
     </section>
   );
