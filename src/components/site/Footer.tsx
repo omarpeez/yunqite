@@ -39,14 +39,6 @@ export function Footer() {
               <li><a href="#contacto" className="hover:text-citrus transition-colors">Contacto</a></li>
             </ul>
           </div>
-          <div>
-            <h4 className="font-display text-lg font-bold">Legal</h4>
-            <ul className="mt-4 space-y-2 text-cream/70">
-              <li><a href="#" className="hover:text-citrus transition-colors">Términos</a></li>
-              <li><a href="#" className="hover:text-citrus transition-colors">Privacidad</a></li>
-              <li><a href="#" className="hover:text-citrus transition-colors">Envíos</a></li>
-            </ul>
-          </div>
         </div>
         <div className="mt-16 flex flex-col items-center justify-between gap-4 border-t border-cream/10 pt-8 text-sm text-cream/50 md:flex-row">
           <p>© 2026 Verde. Todos los derechos reservados.</p>
