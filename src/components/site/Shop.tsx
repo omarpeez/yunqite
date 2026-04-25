@@ -33,6 +33,10 @@ export function Shop() {
             <ProductCard key={p.id} product={p} delay={i * 100} />
           ))}
         </div>
+
+        <p className="reveal mt-10 text-center text-sm italic text-leaf-deep/70">
+          *Precios de menudeo, pregunta por nuestros precios de mayoreo.
+        </p>
       </div>
     </section>
   );
