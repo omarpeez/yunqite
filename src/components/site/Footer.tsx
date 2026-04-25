@@ -10,7 +10,7 @@ export function Footer() {
   return (
     <footer className="bg-leaf-deep text-cream pt-20 pb-10 px-6">
       <div className="mx-auto max-w-7xl">
-        <div className="grid grid-cols-1 gap-12 md:grid-cols-4">
+        <div className="grid grid-cols-1 gap-12 md:grid-cols-3">
           <div className="md:col-span-2">
             <img src={logoYunqi} alt="Yùnqi" className="h-12 w-auto brightness-0 invert" />
             <p className="mt-6 max-w-sm text-cream/60">
