@@ -38,7 +38,7 @@ export function Merch() {
       <div className="absolute inset-0 -z-0 opacity-10 bg-[radial-gradient(circle_at_20%_30%,oklch(0.62_0.14_145),transparent_50%),radial-gradient(circle_at_80%_70%,oklch(0.88_0.16_95),transparent_50%)]" />
       <div className="relative mx-auto max-w-7xl">
         <div className="reveal mb-16 text-center">
-          <span className="text-xs font-semibold uppercase tracking-widest text-leaf">
+          <span className="text-xs font-semibold uppercase tracking-widest text-[oklch(0.85_0.12_149.3)]">
             Yunqi Merch
           </span>
           <h2 className="mt-3 font-display text-5xl md:text-6xl font-black">
