@@ -20,10 +20,10 @@ export function FloatingWhatsApp() {
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Contactar por WhatsApp"
-      className="fixed bottom-4 right-4 z-50 inline-flex h-12 w-12 items-center justify-center rounded-full bg-leaf-deep text-cream shadow-lg shadow-leaf-deep/20 transition-all hover:-translate-y-0.5 hover:bg-leaf focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-leaf focus-visible:ring-offset-2 focus-visible:ring-offset-background active:scale-95 md:bottom-6 md:right-6 md:h-13 md:w-auto md:px-4"
+      className="fixed bottom-4 right-4 z-50 inline-flex h-14 w-14 items-center justify-center rounded-full bg-leaf-deep text-cream shadow-lg shadow-leaf-deep/20 transition-all hover:-translate-y-0.5 hover:bg-leaf focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-leaf focus-visible:ring-offset-2 focus-visible:ring-offset-background active:scale-95 md:bottom-6 md:right-6 md:h-16 md:w-auto md:px-5 md:gap-2"
     >
       <WhatsAppLogo />
-      <span className="hidden text-sm font-semibold md:inline">WhatsApp</span>
+      <span className="hidden text-base font-semibold md:inline">WhatsApp</span>
     </a>
   );
 }
