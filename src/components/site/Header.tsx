@@ -33,7 +33,12 @@ export function Header() {
       }`}
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6">
-        <Link to="/" className="flex items-center gap-2 group" aria-label="Yùnqi inicio">
+        <Link
+          to="/"
+          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+          className="flex items-center gap-2 group"
+          aria-label="Yùnqi inicio"
+        >
           <img
             src={logoYunqi}
             alt="Yùnqi"
