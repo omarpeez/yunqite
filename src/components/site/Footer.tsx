@@ -41,7 +41,7 @@ export function Footer() {
           </div>
         </div>
         <div className="mt-16 flex flex-col items-center justify-between gap-4 border-t border-cream/10 pt-8 text-sm text-cream/50 md:flex-row">
-          <p>© 2026 Verde. Todos los derechos reservados.</p>
+          <p>© 2026 Yùnqi. Todos los derechos reservados.</p>
           <p>Hecho con hojas reales 🌿</p>
         </div>
       </div>
