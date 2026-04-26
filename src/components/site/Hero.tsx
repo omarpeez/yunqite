@@ -48,7 +48,7 @@ export function Hero() {
           <p className="mt-8 max-w-md text-lg text-muted-foreground">
             Saludable, antioxidante y refrescante.{" "}
             <a
-              href="https://www.instagram.com/yunqi.tea"
+              href="https://www.instagram.com/yunqite?igsh=MXQ3c2x1aHQ2Z3c2cA=="
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Visitar Yunqi en Instagram"
