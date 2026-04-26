@@ -47,14 +47,15 @@ export function Hero() {
           </h1>
           <p className="mt-8 max-w-md text-lg text-muted-foreground">
             Saludable, antioxidante y refrescante.{" "}
-            <button
-              type="button"
-              onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-              aria-label="Volver al inicio"
+            <a
+              href="https://www.instagram.com/yunqi.tea"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Visitar Yunqi en Instagram"
               className="relative inline-block font-display font-bold italic text-leaf-deep bg-gradient-to-r from-citrus via-leaf to-citrus bg-[length:200%_auto] bg-clip-text text-transparent animate-[shine_3s_linear_infinite] hover:scale-110 transition-transform cursor-pointer"
             >
               Yunqi
-            </button>{" "}
+            </a>{" "}
             té el mejor té de oolong del mundo.
           </p>
           <div className="mt-10 flex flex-wrap items-center gap-4">
