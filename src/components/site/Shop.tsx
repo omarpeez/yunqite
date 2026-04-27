@@ -6,8 +6,8 @@ import limonFresa from "@/assets/bottle-limon-fresa-real.png";
 import oolong from "@/assets/bottle-oolong-real.png";
 import { addItem, openCart, type Size } from "@/hooks/use-cart";
 
-const SIZES: Size[] = ["500ml", "1L", "Medio galón"];
-const PRICE: Record<Size, number> = { "500ml": 15, "1L": 15, "Medio galón": 15 };
+const SIZES: Size[] = ["500ml", "1L", "1/2 gal"];
+const PRICE: Record<Size, number> = { "500ml": 15, "1L": 15, "1/2 gal": 15 };
 
 const products = [
   { id: "o", name: "Té Oolong", img: oolong, accent: "leaf" },
