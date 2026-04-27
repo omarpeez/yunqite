@@ -1,10 +1,10 @@
 import { useSyncExternalStore } from "react";
 
-export type Size = "500ml" | "1L" | "Medio galón";
+export type Size = "500ml" | "1L" | "1/2 gal";
 export const SIZE_PRICE: Record<Size, number> = {
   "500ml": 4.5,
   "1L": 7.0,
-  "Medio galón": 15,
+  "1/2 gal": 15,
 };
 
 export type CartItem = {
