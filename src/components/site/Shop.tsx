@@ -39,7 +39,7 @@ export function Shop() {
             *Precios de menudeo, pregunta por nuestros precios de mayoreo.
           </p>
           <a
-            href={`https://wa.me/526682502760?text=${encodeURIComponent("Hola yunqi. me interesa comprar por mayoreo. ¿Me podrian compartir su lista de precios?. Gracias")}`}
+            href={`https://api.whatsapp.com/send?phone=526682502760&text=${encodeURIComponent("Hola yunqi. me interesa comprar por mayoreo. ¿Me podrian compartir su lista de precios?. Gracias")}`}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 rounded-full bg-leaf-deep hover:bg-leaf px-6 py-3 text-sm font-semibold uppercase tracking-wider text-cream transition-all hover:scale-105 active:scale-95"
