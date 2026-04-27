@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { ShoppingBag } from "lucide-react";
+import { ShoppingCart } from "lucide-react";
 import { Link } from "@tanstack/react-router";
 import { useCart, openCart } from "@/hooks/use-cart";
 import logoYunqi from "@/assets/logo-yunqi.png";
@@ -57,7 +57,7 @@ export function Header() {
             transition-all hover:scale-110 hover:bg-leaf active:scale-95"
           aria-label="Abrir carrito"
         >
-          <ShoppingBag className="h-5 w-5" />
+          <ShoppingCart className="h-5 w-5" />
           {count > 0 && (
             <span className="absolute -top-1 -right-1 grid h-5 w-5 place-items-center rounded-full bg-citrus text-[11px] font-bold text-leaf-deep animate-in zoom-in">
               {count}
