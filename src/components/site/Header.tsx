@@ -49,7 +49,7 @@ export function Header() {
           {link("/#inicio", "Inicio")}
           {link("/#sabores", "Sabores")}
           {link("/#merch", "Merch")}
-          {link("/#contacto", "Contacto")}
+          {link("/#contacto", "Conversemos")}
         </nav>
         <button
           onClick={openCart}
