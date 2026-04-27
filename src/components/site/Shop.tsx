@@ -34,9 +34,19 @@ export function Shop() {
           ))}
         </div>
 
-        <p className="reveal mt-10 text-center text-sm italic text-leaf-deep/70">
-          *Precios de menudeo, pregunta por nuestros precios de mayoreo.
-        </p>
+        <div className="reveal mt-10 flex flex-col items-center gap-4">
+          <p className="text-center text-sm italic text-leaf-deep/70">
+            *Precios de menudeo, pregunta por nuestros precios de mayoreo.
+          </p>
+          <a
+            href={`https://wa.me/526682502760?text=${encodeURIComponent("Hola yunqi. me interesa comprar por mayoreo. ¿Me podrian compartir su lista de precios?. Gracias")}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 rounded-full bg-leaf-deep hover:bg-leaf px-6 py-3 text-sm font-semibold uppercase tracking-wider text-cream transition-all hover:scale-105 active:scale-95"
+          >
+            Pedir lista de mayoreo
+          </a>
+        </div>
       </div>
     </section>
   );
