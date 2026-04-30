@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { ShoppingCart } from "lucide-react";
+import { ShoppingCart, Gift } from "lucide-react";
 import { Link } from "@tanstack/react-router";
 import { useCart, openCart } from "@/hooks/use-cart";
 import logoYunqi from "@/assets/logo-yunqi.png";
@@ -50,6 +50,14 @@ export function Header() {
           {link("/#sabores", "Sabores")}
           {link("/#merch", "Merch")}
           {link("/#contacto", "Conversemos")}
+          <a
+            href="/#merch"
+            className="relative inline-flex items-center justify-center text-foreground/80 transition-colors hover:text-leaf-deep"
+            aria-label="Sorpresas y regalos"
+          >
+            <Gift className="h-5 w-5" />
+            <span className="absolute -top-1 -left-1 h-2.5 w-2.5 rounded-full bg-berry ring-2 ring-background pulse-soft" />
+          </a>
         </nav>
         <button
           onClick={openCart}
