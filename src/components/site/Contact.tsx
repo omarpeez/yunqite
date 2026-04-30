@@ -42,17 +42,17 @@ export function Contact() {
             <span className="italic font-light">cómo estás hoy.</span>
           </h2>
           <p className="mt-6 max-w-md text-lg text-muted-foreground">
-            Por que tu opinión nos interesa, cuéntanos cómo estás hoy, queremos escucharte. Ya sea que tengas una duda, una idea, una propuesta de colaboración, nuestra puerta (y la botella) están siempre abiertas.
+            Tu opinión nos importa y queremos escucharte. Ya sea una duda, una idea o una propuesta de colaboración, nuestra puerta (y la botella) están siempre abiertas.
           </p>
         </div>
         <form onSubmit={onSubmit} className="space-y-6">
           <div className="reveal">
             <label className="block text-xs font-semibold uppercase tracking-widest text-leaf-deep mb-2">
-              Mensaje
+              Cómo estás hoy
             </label>
             <textarea
               rows={5}
-              placeholder="Cómo estás hoy…"
+              placeholder="Mensaje…"
               value={form.message}
               onChange={(e) => setForm({ message: e.target.value })}
               className={`w-full rounded-2xl border-2 bg-background px-5 py-4 text-foreground transition-all focus:outline-none focus:ring-4 focus:ring-leaf/20 ${
