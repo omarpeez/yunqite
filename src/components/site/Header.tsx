@@ -3,9 +3,11 @@ import { ShoppingCart, Gift } from "lucide-react";
 import { Link } from "@tanstack/react-router";
 import { useCart, openCart } from "@/hooks/use-cart";
 import logoYunqi from "@/assets/logo-yunqi.png";
+import { GiftModal } from "./GiftModal";
 
 export function Header() {
   const [scrolled, setScrolled] = useState(false);
+  const [giftOpen, setGiftOpen] = useState(false);
   const { count } = useCart();
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24);
@@ -50,14 +52,15 @@ export function Header() {
           {link("/#sabores", "Sabores")}
           {link("/#merch", "Merch")}
           {link("/#contacto", "Conversemos")}
-          <a
-            href="/#merch"
+          <button
+            type="button"
+            onClick={() => setGiftOpen(true)}
             className="relative inline-flex items-center justify-center text-foreground/80 transition-colors hover:text-leaf-deep"
             aria-label="Sorpresas y regalos"
           >
             <Gift className="h-5 w-5" />
             <span className="absolute -top-1 -left-1 h-2.5 w-2.5 rounded-full bg-berry ring-2 ring-background pulse-soft" />
-          </a>
+          </button>
         </nav>
         <button
           onClick={openCart}
@@ -73,6 +76,7 @@ export function Header() {
           )}
         </button>
       </div>
+      <GiftModal open={giftOpen} onClose={() => setGiftOpen(false)} />
     </header>
   );
 }
