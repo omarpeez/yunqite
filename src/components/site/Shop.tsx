@@ -30,7 +30,7 @@ export function Shop() {
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
           {products.map((p, i) => (
             <ProductCard key={p.id} product={p} delay={i * 100} />
           ))}
@@ -92,6 +92,11 @@ function ProductCard({
       <div
         className={`relative h-72 overflow-hidden rounded-2xl bg-gradient-to-br ${accentBg[product.accent]} mb-6`}
       >
+        <span
+          className="absolute top-3 left-3 z-10 inline-flex items-center gap-1 rounded-full bg-leaf-deep/90 px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-cream shadow-lg backdrop-blur-sm -rotate-6"
+        >
+          Pack × 6
+        </span>
         <img
           src={product.img}
           alt={product.name}
