@@ -120,40 +120,43 @@ export function Header() {
       </div>
 
       {/* Mobile menu */}
-      <div
-        className={`md:hidden fixed inset-0 z-[60] transition-opacity duration-300 ${
-          mobileOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
-        }`}
-        aria-hidden={!mobileOpen}
-      >
+      {createPortal(
         <div
-          className="absolute inset-0 bg-foreground/40 backdrop-blur-sm"
-          onClick={() => setMobileOpen(false)}
-        />
-        <div
-          className={`absolute top-0 right-0 h-full w-4/5 max-w-sm bg-background shadow-2xl p-6 flex flex-col transition-transform duration-300 ${
-            mobileOpen ? "translate-x-0" : "translate-x-full"
+          className={`md:hidden fixed inset-0 z-[80] transition-opacity duration-300 ${
+            mobileOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
           }`}
+          aria-hidden={!mobileOpen}
         >
-          <div className="flex items-center justify-between mb-8">
-            <img src={logoYunqi} alt="Yùnqi" className="h-9 w-auto" />
-            <button
-              type="button"
-              onClick={() => setMobileOpen(false)}
-              className="grid place-items-center h-10 w-10 rounded-full border border-border/60 text-foreground hover:bg-muted transition-colors"
-              aria-label="Cerrar menú"
-            >
-              <X className="h-5 w-5" />
-            </button>
+          <div
+            className="absolute inset-0 bg-foreground/40 backdrop-blur-sm"
+            onClick={() => setMobileOpen(false)}
+          />
+          <div
+            className={`absolute top-0 right-0 h-full w-4/5 max-w-sm bg-background shadow-2xl p-6 flex flex-col transition-transform duration-300 ${
+              mobileOpen ? "translate-x-0" : "translate-x-full"
+            }`}
+          >
+            <div className="flex items-center justify-between mb-8">
+              <img src={logoYunqi} alt="Yùnqi" className="h-9 w-auto" />
+              <button
+                type="button"
+                onClick={() => setMobileOpen(false)}
+                className="grid place-items-center h-10 w-10 rounded-full border border-border/60 text-foreground hover:bg-muted transition-colors"
+                aria-label="Cerrar menú"
+              >
+                <X className="h-5 w-5" />
+              </button>
+            </div>
+            <nav className="flex flex-col">
+              {mobileLink("/#inicio", "Inicio")}
+              {mobileLink("/#sabores", "Sabores")}
+              {mobileLink("/#merch", "Merch")}
+              {mobileLink("/#contacto", "Conversemos")}
+            </nav>
           </div>
-          <nav className="flex flex-col">
-            {mobileLink("/#inicio", "Inicio")}
-            {mobileLink("/#sabores", "Sabores")}
-            {mobileLink("/#merch", "Merch")}
-            {mobileLink("/#contacto", "Conversemos")}
-          </nav>
-        </div>
-      </div>
+        </div>,
+        document.body,
+      )}
 
       <GiftModal open={giftOpen} onClose={() => setGiftOpen(false)} />
     </header>
