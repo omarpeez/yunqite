@@ -58,7 +58,7 @@ export function GiftModal({ open, onClose }: { open: boolean; onClose: () => voi
 
   if (!open) return null;
 
-  return (
+  return createPortal(
     <div
       className="fixed inset-0 z-[100] flex items-center justify-center px-6 animate-in fade-in duration-200"
       onClick={onClose}
