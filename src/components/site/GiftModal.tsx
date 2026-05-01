@@ -100,6 +100,7 @@ export function GiftModal({ open, onClose }: { open: boolean; onClose: () => voi
           <X className="h-5 w-5" />
         </button>
       </div>
-    </div>
+    </div>,
+    document.body,
   );
 }
