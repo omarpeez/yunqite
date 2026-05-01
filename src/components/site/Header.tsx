@@ -122,7 +122,7 @@ export function Header() {
       </div>
 
       {/* Mobile menu */}
-      {createPortal(
+      {mounted && createPortal(
         <div
           className={`md:hidden fixed inset-0 z-[80] transition-opacity duration-300 ${
             mobileOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
