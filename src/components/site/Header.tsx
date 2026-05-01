@@ -10,7 +10,9 @@ export function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [giftOpen, setGiftOpen] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [mounted, setMounted] = useState(false);
   const { count } = useCart();
+  useEffect(() => setMounted(true), []);
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24);
     window.addEventListener("scroll", onScroll);
