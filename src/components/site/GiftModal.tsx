@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
+import { createPortal } from "react-dom";
 import { X, Sparkles } from "lucide-react";
 
 const PHRASES: { category: string; text: string }[] = [
@@ -57,7 +58,7 @@ export function GiftModal({ open, onClose }: { open: boolean; onClose: () => voi
 
   if (!open) return null;
 
-  return (
+  return createPortal(
     <div
       className="fixed inset-0 z-[100] flex items-center justify-center px-6 animate-in fade-in duration-200"
       onClick={onClose}
@@ -99,6 +100,7 @@ export function GiftModal({ open, onClose }: { open: boolean; onClose: () => voi
           <X className="h-5 w-5" />
         </button>
       </div>
-    </div>
+    </div>,
+    document.body,
   );
 }
