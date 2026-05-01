@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { createPortal } from "react-dom";
 import { ShoppingCart, Gift, Menu, X } from "lucide-react";
 import { Link } from "@tanstack/react-router";
 import { useCart, openCart } from "@/hooks/use-cart";
