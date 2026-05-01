@@ -56,7 +56,7 @@ export function GiftModal({ open, onClose }: { open: boolean; onClose: () => voi
     };
   }, [open, onClose]);
 
-  if (!open) return null;
+  if (!open || typeof document === "undefined") return null;
 
   return createPortal(
     <div

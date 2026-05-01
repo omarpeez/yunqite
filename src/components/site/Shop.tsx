@@ -8,14 +8,14 @@ import todoEnUno from "@/assets/pack-todo-en-uno.png";
 import { addItem, openCart, type Size } from "@/hooks/use-cart";
 
 const SIZES: Size[] = ["500ml", "1L", "1/2 gal"];
-const PRICE: Record<Size, number> = { "500ml": 15, "1L": 15, "1/2 gal": 15 };
+const PRICE: Record<Size, number> = { "500ml": 35, "1L": 60, "1/2 gal": 110 };
 
 const products = [
-  { id: "o", name: "Té Oolong", img: oolong, accent: "leaf" },
-  { id: "j", name: "Jamaica", img: jamaica, accent: "berry" },
-  { id: "pi", name: "Piña", img: pina, accent: "peach" },
-  { id: "lf", name: "Limón-Fresa", img: limonFresa, accent: "citrus" },
-  { id: "all", name: "Todo en uno", img: todoEnUno, accent: "peach" },
+  { id: "o", name: "Té Oolong", img: oolong, accent: "leaf", pack: 6 },
+  { id: "j", name: "Jamaica", img: jamaica, accent: "berry", pack: 6 },
+  { id: "pi", name: "Piña", img: pina, accent: "peach", pack: 6 },
+  { id: "lf", name: "Limón-Fresa", img: limonFresa, accent: "citrus", pack: 6 },
+  { id: "all", name: "Todo en uno", img: todoEnUno, accent: "peach", pack: 8 },
 ] as const;
 
 export function Shop() {
@@ -95,7 +95,7 @@ function ProductCard({
         <span
           className="absolute top-3 left-3 z-10 inline-flex items-center gap-1 rounded-full bg-leaf-deep/90 px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-cream shadow-lg backdrop-blur-sm -rotate-6"
         >
-          Pack × 6
+          Pack × {product.pack}
         </span>
         <img
           src={product.img}
