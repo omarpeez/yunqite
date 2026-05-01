@@ -1,9 +1,10 @@
 import { useState } from "react";
 import { Plus } from "lucide-react";
-import jamaica from "@/assets/bottle-jamaica-real.png";
-import pina from "@/assets/bottle-pina-real.png";
-import limonFresa from "@/assets/bottle-limon-fresa-real.png";
-import oolong from "@/assets/bottle-oolong-real.png";
+import jamaica from "@/assets/pack-jamaica.png";
+import pina from "@/assets/pack-pina.png";
+import limonFresa from "@/assets/pack-limon-fresa.png";
+import oolong from "@/assets/pack-oolong.png";
+import todoEnUno from "@/assets/pack-todo-en-uno.png";
 import { addItem, openCart, type Size } from "@/hooks/use-cart";
 
 const SIZES: Size[] = ["500ml", "1L", "1/2 gal"];
@@ -14,6 +15,7 @@ const products = [
   { id: "j", name: "Jamaica", img: jamaica, accent: "berry" },
   { id: "pi", name: "Piña", img: pina, accent: "peach" },
   { id: "lf", name: "Limón-Fresa", img: limonFresa, accent: "citrus" },
+  { id: "all", name: "Todo en uno", img: todoEnUno, accent: "peach" },
 ] as const;
 
 export function Shop() {
@@ -28,7 +30,7 @@ export function Shop() {
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
           {products.map((p, i) => (
             <ProductCard key={p.id} product={p} delay={i * 100} />
           ))}
@@ -90,6 +92,11 @@ function ProductCard({
       <div
         className={`relative h-72 overflow-hidden rounded-2xl bg-gradient-to-br ${accentBg[product.accent]} mb-6`}
       >
+        <span
+          className="absolute top-3 left-3 z-10 inline-flex items-center gap-1 rounded-full bg-leaf-deep/90 px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-cream shadow-lg backdrop-blur-sm -rotate-6"
+        >
+          Pack × 6
+        </span>
         <img
           src={product.img}
           alt={product.name}
