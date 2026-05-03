@@ -21,6 +21,7 @@ function Index() {
   useMerchSync();
   return (
     <main className="bg-background text-foreground">
+      <TopBanner />
       <Header />
       <Hero />
       <Shop />
