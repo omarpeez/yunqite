@@ -14,7 +14,7 @@ export function Footer() {
           <div className="md:col-span-2">
             <img src={logoYunqi} alt="Yùnqi" className="h-12 w-auto brightness-0 invert" />
             <p className="mt-6 max-w-sm text-cream/60">
-              Té premium embotellado. Cosechado con cariño, servido con orgullo.
+              Más que una bebida: Es tu momento de bienestar. Creado para acompañar tu mejor versión.
             </p>
             <div className="mt-8 flex gap-3">
               {social.map((s) => (
