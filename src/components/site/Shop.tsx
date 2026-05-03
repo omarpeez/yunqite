@@ -121,9 +121,14 @@ function ProductCard({
       </div>
 
       <div className="mt-6 flex items-center justify-between">
-        <span className="font-display text-3xl font-black text-leaf-deep">
-          ${PRICE[size].toFixed(2)}
-        </span>
+        <div className="flex flex-col">
+          <span className="font-display text-3xl font-black text-leaf-deep">
+            ${PRICE[size].toFixed(2)}
+          </span>
+          <span className="text-[11px] font-semibold uppercase tracking-wider text-leaf-deep/60">
+            Pack × {PACK[size]} pzs
+          </span>
+        </div>
         <button
           onClick={handleAdd}
           className={`grid h-12 w-12 place-items-center rounded-full transition-all active:scale-90 ${
