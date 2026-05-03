@@ -56,7 +56,7 @@ export function Hero() {
             >
               Yunqi
             </a>{" "}
-            té el mejor té de oolong del mundo.
+            té el mejor té de oolong.
           </p>
           <div className="mt-10 flex flex-wrap items-center gap-4">
             <a

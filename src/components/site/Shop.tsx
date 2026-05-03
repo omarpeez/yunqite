@@ -8,14 +8,15 @@ import todoEnUno from "@/assets/pack-todo-en-uno.png";
 import { addItem, openCart, type Size } from "@/hooks/use-cart";
 
 const SIZES: Size[] = ["500ml", "1L", "1/2 gal"];
-const PRICE: Record<Size, number> = { "500ml": 35, "1L": 60, "1/2 gal": 110 };
+const PRICE: Record<Size, number> = { "500ml": 180, "1L": 150, "1/2 gal": 120 };
+const PACK: Record<Size, number> = { "500ml": 10, "1L": 6, "1/2 gal": 3 };
 
 const products = [
-  { id: "o", name: "Té Oolong", img: oolong, accent: "leaf", pack: 6 },
-  { id: "j", name: "Jamaica", img: jamaica, accent: "berry", pack: 6 },
-  { id: "pi", name: "Piña", img: pina, accent: "peach", pack: 6 },
-  { id: "lf", name: "Limón-Fresa", img: limonFresa, accent: "citrus", pack: 6 },
-  { id: "all", name: "Todo en uno", img: todoEnUno, accent: "peach", pack: 8 },
+  { id: "o", name: "Té Oolong", img: oolong, accent: "leaf" },
+  { id: "j", name: "Jamaica", img: jamaica, accent: "berry" },
+  { id: "pi", name: "Piña", img: pina, accent: "peach" },
+  { id: "lf", name: "Limón-Fresa", img: limonFresa, accent: "citrus" },
+  { id: "all", name: "Todo en uno", img: todoEnUno, accent: "peach" },
 ] as const;
 
 export function Shop() {
@@ -38,7 +39,7 @@ export function Shop() {
 
         <div className="reveal mt-10 flex flex-col items-center gap-4">
           <p className="text-center text-sm italic text-leaf-deep/70">
-            *Precios de menudeo, pregunta por nuestros precios de mayoreo.
+            *Precios de menudeo. Los precios de mayoreo se atienden por WhatsApp.
           </p>
           <a
             href={`https://api.whatsapp.com/send?phone=526682502760&text=${encodeURIComponent("Hola yunqi. me interesa comprar por mayoreo. ¿Me podrian compartir su lista de precios?. Gracias")}`}
@@ -92,11 +93,6 @@ function ProductCard({
       <div
         className={`relative h-72 overflow-hidden rounded-2xl bg-gradient-to-br ${accentBg[product.accent]} mb-6`}
       >
-        <span
-          className="absolute top-3 left-3 z-10 inline-flex items-center gap-1 rounded-full bg-leaf-deep/90 px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-cream shadow-lg backdrop-blur-sm -rotate-6"
-        >
-          Pack × {product.pack}
-        </span>
         <img
           src={product.img}
           alt={product.name}
@@ -125,9 +121,14 @@ function ProductCard({
       </div>
 
       <div className="mt-6 flex items-center justify-between">
-        <span className="font-display text-3xl font-black text-leaf-deep">
-          ${PRICE[size].toFixed(2)}
-        </span>
+        <div className="flex flex-col">
+          <span className="font-display text-3xl font-black text-leaf-deep">
+            ${PRICE[size].toFixed(2)}
+          </span>
+          <span className="text-[11px] font-semibold uppercase tracking-wider text-leaf-deep/60">
+            Pack × {PACK[size]} pzs
+          </span>
+        </div>
         <button
           onClick={handleAdd}
           className={`grid h-12 w-12 place-items-center rounded-full transition-all active:scale-90 ${
