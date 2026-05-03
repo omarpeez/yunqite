@@ -193,3 +193,9 @@
 .reveal { opacity: 0; }
 .reveal.in-view { animation: fade-up 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards; }
 .pulse-soft { animation: pulse-soft 2s infinite; }
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.animate-marquee { animation: marquee 30s linear infinite; }
