@@ -78,7 +78,6 @@ function ProductCard({
       img: product.img,
     });
     setAdded(true);
-    openCart();
     setTimeout(() => setAdded(false), 1200);
   };
 
