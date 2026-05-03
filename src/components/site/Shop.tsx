@@ -4,8 +4,7 @@ import jamaica from "@/assets/pack-jamaica.png";
 import pina from "@/assets/pack-pina.png";
 import limonFresa from "@/assets/pack-limon-fresa.png";
 import oolong from "@/assets/pack-oolong.png";
-import todoEnUno from "@/assets/pack-todo-en-uno.png";
-import { addItem, openCart, type Size } from "@/hooks/use-cart";
+import { addItem, type Size } from "@/hooks/use-cart";
 
 const SIZES: Size[] = ["500ml", "1L", "1/2 gal"];
 const PRICE: Record<Size, number> = { "500ml": 180, "1L": 150, "1/2 gal": 120 };
@@ -16,7 +15,6 @@ const products = [
   { id: "j", name: "Jamaica", img: jamaica, accent: "berry" },
   { id: "pi", name: "Piña", img: pina, accent: "peach" },
   { id: "lf", name: "Limón-Fresa", img: limonFresa, accent: "citrus" },
-  { id: "all", name: "Todo en uno", img: todoEnUno, accent: "peach" },
 ] as const;
 
 export function Shop() {
