@@ -7,8 +7,7 @@ import oolong from "@/assets/pack-oolong.png";
 import { addItem, type Size } from "@/hooks/use-cart";
 
 const SIZES: Size[] = ["500ml", "1L", "1/2 gal"];
-const PRICE: Record<Size, number> = { "500ml": 180, "1L": 150, "1/2 gal": 120 };
-const PACK: Record<Size, number> = { "500ml": 10, "1L": 6, "1/2 gal": 3 };
+const PRICE: Record<Size, number> = { "500ml": 18, "1L": 25, "1/2 gal": 40 };
 
 const products = [
   { id: "o", name: "Té Oolong", img: oolong, accent: "leaf" },
@@ -121,9 +120,6 @@ function ProductCard({
         <div className="flex flex-col">
           <span className="font-display text-3xl font-black text-leaf-deep">
             ${PRICE[size].toFixed(2)}
-          </span>
-          <span className="text-[11px] font-semibold uppercase tracking-wider text-leaf-deep/60">
-            Pack × {PACK[size]} pzs
           </span>
         </div>
         <button

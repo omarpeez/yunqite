@@ -144,13 +144,24 @@ export function CartDrawer() {
 
         {items.length > 0 && (
           <div className="border-t border-border/60 bg-cream/40 px-6 py-5">
+            {subtotal >= 150 ? (
+              <div className="mb-3 rounded-xl bg-leaf/15 px-3 py-2 text-center text-xs font-bold uppercase tracking-wider text-leaf-deep">
+                🎉 ¡Tienes envío GRATIS!
+              </div>
+            ) : (
+              <div className="mb-3 rounded-xl bg-citrus/20 px-3 py-2 text-center text-xs font-semibold text-leaf-deep">
+                Agrega ${(150 - subtotal).toFixed(2)} más para envío GRATIS
+              </div>
+            )}
             <div className="flex items-center justify-between text-sm text-foreground/70">
               <span>Subtotal</span>
               <span className="font-medium">${subtotal.toFixed(2)}</span>
             </div>
             <div className="mt-1 flex items-center justify-between text-sm text-foreground/70">
               <span>Envío</span>
-              <span className="font-medium">Calculado en checkout</span>
+              <span className="font-medium">
+                {subtotal >= 150 ? "GRATIS" : "Calculado en checkout"}
+              </span>
             </div>
             <div className="mt-4 flex items-baseline justify-between">
               <span className="font-display text-lg font-bold text-leaf-deep">
