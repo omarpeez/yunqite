@@ -29,7 +29,7 @@ export function Shop() {
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
+        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
           {products.map((p, i) => (
             <ProductCard key={p.id} product={p} delay={i * 100} />
           ))}
