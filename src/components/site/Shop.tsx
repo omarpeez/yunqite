@@ -39,7 +39,7 @@ export function Shop() {
 
         <div className="reveal mt-10 flex flex-col items-center gap-4">
           <p className="text-center text-sm italic text-leaf-deep/70">
-            *Precios de menudeo, pregunta por nuestros precios de mayoreo.
+            *Precios de menudeo. Los precios de mayoreo se atienden por WhatsApp.
           </p>
           <a
             href={`https://api.whatsapp.com/send?phone=526682502760&text=${encodeURIComponent("Hola yunqi. me interesa comprar por mayoreo. ¿Me podrian compartir su lista de precios?. Gracias")}`}
