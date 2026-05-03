@@ -121,9 +121,6 @@ function ProductCard({
           <span className="font-display text-3xl font-black text-leaf-deep">
             ${PRICE[size].toFixed(2)}
           </span>
-          <span className="text-[11px] font-semibold uppercase tracking-wider text-leaf-deep/60">
-            Pack × {PACK[size]} pzs
-          </span>
         </div>
         <button
           onClick={handleAdd}
