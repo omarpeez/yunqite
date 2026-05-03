@@ -93,11 +93,6 @@ function ProductCard({
       <div
         className={`relative h-72 overflow-hidden rounded-2xl bg-gradient-to-br ${accentBg[product.accent]} mb-6`}
       >
-        <span
-          className="absolute top-3 left-3 z-10 inline-flex items-center gap-1 rounded-full bg-leaf-deep/90 px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-cream shadow-lg backdrop-blur-sm -rotate-6"
-        >
-          Pack × {product.pack}
-        </span>
         <img
           src={product.img}
           alt={product.name}
