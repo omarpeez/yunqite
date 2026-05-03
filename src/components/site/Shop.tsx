@@ -4,8 +4,7 @@ import jamaica from "@/assets/pack-jamaica.png";
 import pina from "@/assets/pack-pina.png";
 import limonFresa from "@/assets/pack-limon-fresa.png";
 import oolong from "@/assets/pack-oolong.png";
-import todoEnUno from "@/assets/pack-todo-en-uno.png";
-import { addItem, openCart, type Size } from "@/hooks/use-cart";
+import { addItem, type Size } from "@/hooks/use-cart";
 
 const SIZES: Size[] = ["500ml", "1L", "1/2 gal"];
 const PRICE: Record<Size, number> = { "500ml": 180, "1L": 150, "1/2 gal": 120 };
@@ -16,7 +15,6 @@ const products = [
   { id: "j", name: "Jamaica", img: jamaica, accent: "berry" },
   { id: "pi", name: "Piña", img: pina, accent: "peach" },
   { id: "lf", name: "Limón-Fresa", img: limonFresa, accent: "citrus" },
-  { id: "all", name: "Todo en uno", img: todoEnUno, accent: "peach" },
 ] as const;
 
 export function Shop() {
@@ -31,7 +29,7 @@ export function Shop() {
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
+        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
           {products.map((p, i) => (
             <ProductCard key={p.id} product={p} delay={i * 100} />
           ))}
@@ -80,7 +78,6 @@ function ProductCard({
       img: product.img,
     });
     setAdded(true);
-    openCart();
     setTimeout(() => setAdded(false), 1200);
   };
 
